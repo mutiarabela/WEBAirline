@@ -1,0 +1,8 @@
+com/restapi/airlines/controller/AirlineController.class
+com/restapi/airlines/service/UserService.class
+com/restapi/airlines/config/SwaggerConfig.class
+com/restapi/airlines/AirlinesApplication.class
+com/restapi/airlines/controller/UserController.class
+com/restapi/airlines/service/AirlineService.class
+com/restapi/airlines/model/Airline.class
+com/restapi/airlines/model/User.class

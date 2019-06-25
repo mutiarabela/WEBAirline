@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update User</title>
+</head>
+<body>
+<form action="#" th:action="@{/update/{id}(id=${user.idUser})}" th:object="${user}" method="post">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text" th:field="*{nameUser}" id="nameUser" placeholder="Your username"></td>
+            <td><span th:if="${#fields.hasErrors('nameUser')}" th:errors="*{nameUser}"></span></td>
+        </tr>
+        <tr>
+            <td><label>First Name</label></td>
+            <td><input type="text" th:field="*{firstNameUser}" id="firstNameUser" placeholder="Your first name"></td>
+            <td><span th:if="${#fields.hasErrors('firstNameUser')}" th:errors="*{firstNameUser}"></span></td>
+        </tr>
+        <tr>
+            <td><label>Last Name</label></td>
+            <td><input type="text" th:field="*{lastNameUser}" id="lastNameUser" placeholder="Your last name"></td>
+            <td><span th:if="${#fields.hasErrors('lastNameUser')}" th:errors="*{lastNameUser}"></span></td>
+        </tr>
+        <tr>
+            <td><label>Phone Number</label></td>
+            <td><input type="text" th:field="*{phoneNumUser}" id="phoneNumUser" placeholder="Your phone number ex: 08123456789"></td>
+            <td><span th:if="${#fields.hasErrors('phoneNumUser')}" th:errors="*{phoneNumUser}"></span></td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" th:field="*{emailUser}" id="emailUser" placeholder="Email">
+            <td><span th:if="${#fields.hasErrors('emailUser')}" th:errors="*{emailUser}"></span></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="text" th:field="*{passwordUser}" id="passwordUser" placeholder="Your password"></td>
+            <td><span th:if="${#fields.hasErrors('passwordUser')}" th:errors="*{passwordUser}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="submit" value="Update User"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

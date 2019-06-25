@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h2>Users</h2>
+<table border="solid 1px black">
+    <thead style="background: grey; color: white;">
+    <tr>
+        <th>ID</th>
+        <th>Airline Name</th>
+        <th>Airline Type</th>
+        <th>Airport Origin</th>
+        <th>Airport Destination</th>
+        <th>Airline Destination</th>
+        <th>Price Airline</th>
+        <th>Discount</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="airline : ${airlines}">
+        <td th:text="${airline.idAirline}"></td>
+        <td th:text="${airline.nameAirline}"></td>
+        <td th:text="${airline.typeAirline}"></td>
+        <td th:text="${airline.airportOriginAirline}"></td>
+        <td th:text="${airline.airportDestinationAirline}"></td>
+        <td th:text="${airline.destinationAirline}"></td>
+        <td th:text="${airline.priceAirline}"></td>
+        <td th:text="${airline.discountAirline}"></td>
+        <td><a th:href="@{/delete/{id}(id=${airline.idAirline})}">X</a></td>
+        <td><a th:href="@{/edit/{id}(id=${airline.idAirline})}">Edit</a></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<p><a href="/signup">Add a new user</a></p>
+</div>
+</body>
+</html>
